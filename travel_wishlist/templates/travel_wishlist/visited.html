@@ -1,0 +1,20 @@
+<h2> Visited Locattions </h2>
+
+{% if places %}
+
+<ul>
+    {% for place in places %}
+        <div>
+            {% if place.visited == True %}
+                <li>{{place.name}}</li>
+            {% endif %}
+        </div>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <p> You have not visited any places. </p>
+
+{% endif %}
+
+<a href="{% url 'place_list' %}">Places you want to go.</a>
