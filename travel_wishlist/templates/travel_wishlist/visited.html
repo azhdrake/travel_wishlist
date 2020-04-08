@@ -9,7 +9,7 @@
     {% for place in places %}
         <div>
             {% if place.visited == True %}
-                <li>{{place.name}}</li>
+                <li><a href="{% url 'place_details' place.pk %}">{{place.name}}</a></li>
             {% endif %}
         </div>
     {% endfor %}
